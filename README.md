@@ -1,6 +1,3 @@
-Absolutely, My Lord! Here is the README file in a more stylized version of Markdown:
-
-```markdown
 # 📚 Library Management System
 
 Welcome to the Library Management System, a sophisticated solution for managing your library's book collection. This project combines the power of Golang for the backend and React for the frontend, providing an intuitive interface to handle all your library's needs.
@@ -89,6 +86,3 @@ Contributions are warmly welcomed! If you find improvements or have suggestions,
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Feel free to let me know if you have any specific styling preferences or if you'd like further modifications, My Lord.

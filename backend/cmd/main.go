@@ -7,8 +7,8 @@ import (
 	"github.com/jazaltron10/libraryApp/backend/internal/handler"
 	"github.com/jazaltron10/libraryApp/backend/internal/model"
 	"github.com/jazaltron10/libraryApp/backend/internal/repository"
-	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 func main() {
@@ -36,6 +36,16 @@ func main() {
 	e.POST("/books", bookHandler.AddBookHandler)
 	e.PUT("/books/:id", bookHandler.UpdateBookHandler)
 	e.DELETE("/books/:id", bookHandler.DeleteBookHandler)
+
+	// backend/cmd/main.go
+
+	// ...
+
+	// Enable CORS
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"http://localhost:5173"}, // Add your frontend origin(s)
+		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
+	}))
 
 	// Start the server
 	port := os.Getenv("PORT")
